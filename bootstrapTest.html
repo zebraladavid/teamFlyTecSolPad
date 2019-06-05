@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="character.css">
+
+    <title>Charakterauswahl</title>
+  </head>
+  <body>
+    <div class="text-center">
+        <br>
+        <br>
+        <br>
+      <h1>Charakterauswahl</h1>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <form action="/game" method="POST">
+          <ul>
+              <li><input type="checkbox" id="cb1" onClick="changeHTMLContent()" name="cb1"/>
+                <label for="cb1" id="red"><img src="Astronaut-10.png" /></label>
+                <div id="spieler1"></div>
+                <input type="hidden" id="sp1" value="" name="spieler1">
+              </li>
+              <li><input type="checkbox" id="cb2" onClick="changeHTMLContent()"/>
+                <label for="cb2" id="blue"><img src="Astronaut-10.png" /></label>
+                <div id="spieler2"></div>
+                <input type="hidden" id="sp2" value="" name="spieler2">
+              </li>
+              <li><input type="checkbox" id="cb3" onClick="changeHTMLContent()">
+                <label for="cb3" id="green"><img src="Astronaut-10.png" /></label>
+                <div id="spieler3"></div>
+                <input type="hidden" id="sp3" value="" name="spieler3">
+              </li>
+              <li><input type="checkbox" id="cb4" onClick="changeHTMLContent()">
+                <label for="cb4"id="yellow"><img src="Astronaut-10.png" /></label>
+                <div id="spieler4"></div>
+                <input type="hidden" id="sp4" value="" name="spieler4">
+              </li>
+            </ul>
+            <div>
+             <input class="btn btn-primary" type="submit" value="Spiel starten" id="submit" disabled>
+            </div>
+      </form> 
+    
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="auswahl.js"></script>
+  </body>
+</html>

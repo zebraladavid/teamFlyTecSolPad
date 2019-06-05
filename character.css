@@ -1,0 +1,101 @@
+body {
+  background-image: url("sunrise-1756274_1920.jpg");
+}
+
+h1 {
+  color: lightgrey;
+}
+
+div {
+  color: white;
+}
+
+ul {
+    list-style-type: none;
+  }
+  
+  li {
+    display: inline-block;
+  }
+  
+  input[type="checkbox"][id^="cb"] {
+    display: none;
+  }
+  
+  label {
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  label:before {
+    background-color: white;
+    color: white;
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 1px solid grey;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+  }
+  
+  label img {
+    height: 10%;
+    width: 190px;
+    transition-duration: 0.2s;
+    transform-origin: 50% 50%;
+  }
+  
+  :checked + #red {
+    border-color: red;
+    border: 1px solid red;
+  }
+   :checked + #blue {
+    border-color: blue;
+    border: 1px solid blue;
+  }
+   :checked + #green {
+    border-color: green;
+    border: 1px solid green;
+  }
+   :checked + #yellow {
+    border-color: yellow;
+    border: 1px solid yellow;
+  }
+  
+  :checked + #red:before {
+    content: "✓";
+    background-color: red;
+    transform: scale(1);
+  }
+  :checked + #blue:before {
+    content: "✓";
+    background-color: blue;
+    transform: scale(1);
+  }
+  :checked + #green:before {
+    content: "✓";
+    background-color: green;
+    transform: scale(1);
+  }
+  :checked + #yellow:before {
+    content: "✓";
+    background-color: yellow;
+    color: black;
+    transform: scale(1);
+  }
+
+  
+  :checked + label img {
+    transform: scale(0.9);
+    z-index: -1;
+  }
